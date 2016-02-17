@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="autor" content="David Vaquero" />
+		<meta name="generator" content="Aptana Studio 3.6.1" />
+		<meta name="copyright" content="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+		<meta name="robots" content="index, follow" />
+		<meta name="keywords" content="html, ejemplo xhtml, esqueleto xhtml" />
+		<meta name="description" content="Ejemplo de Esqueleto de XHTML 1.0 Trasitional" />
+		<title>Mi titulo</title>
+		<link href="css/estilos.css" rel="stylesheet">
+		<script src="js/jquery-1.12.0.js"></script>
+		<!--script src="http://code.highcharts.com/highcharts.js"></script-->
+		<script src="js/jquery.validate.js"></script>
+		<script src="js/plantilla-jquery.js"></script>
+	</head>
+	<body>
+	<h1>Ejemplo 1 de formulario</h1>
+	<form class="cmxform" id="formulario" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname">Name (required, at least 2 characters)</label>
+				<input id="cname" name="name" minlength="2" type="text" required>
+				<label id="cname-error" class="error" for="cname" style="display: none;"></label>
+			</p>
+			<p>
+				<label for="cemail">E-Mail (required)</label>
+				<input id="cemail" type="email" name="email" required>
+			</p>
+			<p>
+				<label for="curl">URL (optional)</label>
+				<input id="curl" type="url" name="url">
+			</p>
+			<p>
+				<label for="ccomment">Your comment (required)</label>
+				<textarea id="ccomment" name="comment" required></textarea>
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 2 de formulario: Rules</h1>
+	<form class="cmxform" id="formulario2" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname2">Name (required)</label>
+				<input id="cname2" name="name" type="text">
+			</p>
+			<p>
+				<label for="cemail2">E-Mail (required, email)</label>
+				<input id="cemail2" type="email" name="email" >
+			</p>
+			<p>
+				<label for="curl2">URL (optional)</label>
+				<input id="curl2" type="url" name="url">
+			</p>
+			<p>
+				<label for="ccomment2">Your comment (optional)</label>
+				<textarea id="ccomment2" name="comment"></textarea>
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 3 de formulario: Rules - Dependencias</h1>
+	<form id="formulario3">
+		<label for="subscribe">Do you wants to subscribe?</label><br>
+		<input type="checkbox" name="check" value="y" id="subscribe">yes<br>
+		<p>if you have a name give it to me!</p>
+		<label for="email3">Your Name</label>
+		<input name="email3" id="email3" placeholder="email..." />
+		<br/>
+		<input type="submit" value="Submit"/>
+	</form>
+	<h1>Ejemplo 4 de formulario: Rules, Mensajes</h1>
+	<form class="cmxform" id="formulario4" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname4">Name (required)</label>
+				<input id="cname4" name="name" type="text">
+			</p>
+			<p>
+				<label for="cemail4">E-Mail (required,emails)</label>
+				<input id="cemail4" type="email" name="email" >
+			</p>
+
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 5 de formulario: Rules, Mensaje Personalizado</h1>
+	<form class="cmxform" id="formulario5" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname5">Name (required, minlength)</label>
+				<input id="cname5" name="name" type="text">
+			</p>
+
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 6 de formulario: Rules, Sin OnSubmit</h1>
+	<form class="cmxform" id="formulario6" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname6">Name (required, minlength)</label>
+				<input id="cname6" name="name" type="text">
+			</p>
+
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 7 de formulario: Rules, , Sin OnBlur</h1>
+	<form class="cmxform" id="formulario7" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname7">Name (required, minlength)</label>
+				<input id="cname7" name="name" type="text">
+			</p>
+
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 8 de formulario: Rules, , Sin OnKeyUp</h1>
+	<form class="cmxform" id="formulario8" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname8">Name (required, minlength)</label>
+				<input id="cname8" name="name" type="text">
+			</p>
+
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+
+	<!--div id="container" style="width:100%; height:400px;"></div-->
+	</body>
+</html>
