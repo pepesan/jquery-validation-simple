@@ -13,6 +13,7 @@
 		<script src="js/jquery-1.12.0.js"></script>
 		<!--script src="http://code.highcharts.com/highcharts.js"></script-->
 		<script src="js/jquery.validate.js"></script>
+		<script src="js/localization/messages_es.js"></script>
 		<script src="js/plantilla-jquery.js"></script>
 	</head>
 	<body>
@@ -151,7 +152,117 @@
 			</p>
 		</fieldset>
 	</form>
-
+	<h1>Ejemplo 9 de formulario: Agrupaciones de errores</h1>
+	<form class="cmxform" id="formulario9" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p id="primer">
+				<label for="cname9">Name (required, minlength)</label>
+				<input id="cname9" name="name" type="text">
+			</p>
+			<p>
+				<label for="clastname9">Last Name (required, minlength)</label>
+				<input id="clastname9" name="lastname" type="text">
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 10 de formulario: Más validadores de campos (longitudes)</h1>
+	<form class="cmxform" id="formulario10" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name</legend>
+			<p >
+				<label for="cname10">Name (required, minlength)</label>
+				<input id="cname10" name="nombre" type="text">
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 11 de formulario: Más validadores de campos (magnitudes)</h1>
+	<form class="cmxform" id="formulario11" method="get" action="">
+		<fieldset>
+			<legend>Datos del crédito</legend>
+			<p >
+				<label for="plazo10">Plazo</label>
+				<input id="plazo10" name="plazo" type="number" value="12"/>
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 12 de formulario: Más validadores de campos (magnitudes)</h1>
+	<form class="cmxform" id="formulario12" method="get" action="">
+		<fieldset>
+			<legend>Datos del crédito</legend>
+			<p >
+				<label for="plazo12">Plazo</label>
+				<input id="plazo12" name="plazo" type="number"
+					   value="12" required min="12" max="36"/>
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 13 de formulario: Más validadores de campos (longitudes)</h1>
+	<form class="cmxform" id="formulario13" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name</legend>
+			<p >
+				<label for="cname13">Name (required, minlength)</label>
+				<input id="cname13" name="nombre" type="text"
+					required maxlength="10" minlength="5"
+				>
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 14 de formulario: Más validadores de campos (longitudes)</h1>
+	<form class="cmxform" id="formulario14" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name</legend>
+			<p >
+				<label for="cname14">Sitio Web</label>
+				<input id="cname14" name="web" type="url" required />
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 15 de formulario: Más validadores de campos (url)</h1>
+	<form class="cmxform" id="formulario15" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name</legend>
+			<p >
+				<label for="cname15">Sitio Web</label>
+				<input id="cname15" name="web" type="url" required />
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<h1>Ejemplo 16 de formulario: Más validadores de campos (fecha)</h1>
+	<form class="cmxform" id="formulario16" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name</legend>
+			<p >
+				<label for="cname16">Fecha</label>
+				<input id="cname16" name="fecha" type="date" required />
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
 	<!--div id="container" style="width:100%; height:400px;"></div-->
 	</body>
 </html>

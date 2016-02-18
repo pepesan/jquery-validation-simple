@@ -92,8 +92,113 @@ function init() {
         },
         onkeyup: false
     });
+    $("#formulario9").validate({
+        rules:{
+            name:{
+                required:true
+            },
+            lastname:{
+                required:true
+            }
+        },
+        groups: {
+            username: "name lastname"
+        },
+        errorPlacement: function(error, element) {
+            if (element.attr("name") == "name" || element.attr("name") == "lastname" ) {
+                error.insertBefore("#primer");
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
+    $("#formulario10").validate({
+        rules:{
+            nombre:{
+                required:true,
+                rangelength: [5, 10],
+                //minlength:5,
+                //maxlength:10
+            }
+        }
+
+    });
+    $("#formulario11").validate({
+        rules:{
+            plazo:{
+                required:true,
+                number: true,
+                min: 12,
+                max: 36
+            }
+        }
+
+    });
+    $("#formulario12").validate({
+
+
+    });
+    $("#formulario13").validate({
+    });
+    $("#formulario14").validate({
+        /*
+        rules:{
+            web:{
+                required:true,
+                url:true
+            }
+        }
+        */
+    });
+    $("#formulario15").validate({
+        /*
+         rules:{
+             web:{
+                 required:true,
+                 url:true
+             }
+         },
+         */
+        messages:{
+            web:{
+                required:"Alguna web tendrás no? Venga pon una!",
+                //url:"Anda pon una URL válida! Pero güena ehh?"
+            }
+        }
+    });
+    $("#formulario16").validate({
+        /*
+         rules:{
+             fecha:{
+                 required:true,
+                 date:true
+             }
+         }
+        */
+        messages:{
+            fecha:{
+                required:"Es necesario meter una fecha!",
+                date:"El modelo de fecha es dd/mm/aaaa"
+            }
+        }
+    });
 }
 $(document).ready(init);
-//document.addEventListener("DOMContentLoaded",init);
-//$(window).load(init);
-//window.addEventListener("load",init);
+/*
+ required – Makes the element required.
+ remote – Requests a resource to check the element for validity.
+ minlength – Makes the element require a given minimum length.
+ maxlength – Makes the element require a given maxmimum length.
+ rangelength – Makes the element require a given value range.
+ min – Makes the element require a given minimum.
+ max – Makes the element require a given maximum.
+ range – Makes the element require a given value range.
+ email – Makes the element require a valid email
+ url – Makes the element require a valid url
+ date – Makes the element require a date.
+ dateISO – Makes the element require an ISO date.
+ number – Makes the element require a decimal number.
+ digits – Makes the element require digits only.
+ creditcard – Makes the element require a credit card number.
+ equalTo – Requires the element to be the same as another one
+ */
