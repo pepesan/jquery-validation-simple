@@ -173,7 +173,7 @@ function init() {
                  required:true,
                  date:true
              }
-         }
+         },
         */
         messages:{
             fecha:{
@@ -182,6 +182,31 @@ function init() {
             }
         }
     });
+
+    $.validator.addMethod("miValidador", function (value, element, options)
+        {
+            //se debe devolver true si valida, false si no
+            return false;
+        },
+        "Esto no valida"
+    );
+    $("#formulario17").validate({
+         rules:{
+             name:{
+                 required:true,
+                 miValidador:true
+             }
+         },
+
+    });
+    //validador personalizado de una url que empiece por un determinado dominio
+    $.validator.addMethod("domain", function(value, element) {
+        return this.optional(element) || /^http:\/\/mycorporatedomain.com/.test(value);
+    }, "Please specify the correct domain for your documents");
+    //saber si un número está entre dos valores que se pongan como valor
+    $.validator.addMethod("math", function(value, element, params) {
+        return this.optional(element) || value == params[0] + params[1];
+    }, jQuery.validator.format("Please enter the correct value for {0} + {1}"));
 }
 $(document).ready(init);
 /*
