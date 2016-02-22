@@ -10,7 +10,7 @@
   <link href="css/jquery.mobile.custom.structure.css" rel="stylesheet"/>
   <!-- Fichero común de iconos -->
   <link href="css/jquery.mobile.icons.min.css" rel="stylesheet"/>
-  <!-- fichero específico del tema (Themeroller) -->
+  <!-- fichero específico de tu tema (Themeroller) -->
   <!--link href="css/minombre.css" rel="stylesheet"/-->
   <!-- Fichero genérico de tema -->
   <link href="css/jquery.mobile.custom.theme.css" rel="stylesheet"/>
@@ -42,12 +42,12 @@
     </div><!-- /footer -->
   </div><!-- /page -->
   <div id="dialogo">
-    <div data-role="header">
-      <h1>Cabecera del diálogo</h1>
+    <div data-role="header" data-theme="b">
+      <h1>Cabecera</h1>
     </div>
     <div role="main" class="ui-content">
       <h1>Contenido del diálogo</h1>
-      <p><a href="#primera">Volver a primera</a></p>
+      <p><a href="#primera" >Volver a primera</a></p>
     </div>
     <div data-role="footer">
       <h1>Título de pie de diálogo</h1>
@@ -63,6 +63,7 @@
     <div role="main" class="ui-content">
       <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
       <p><a href="#primera">Volver a primera</a></p>
+      <a href="#" class="ui-btn ui-icon-delete ui-btn-icon-top ui-corner-all">No text</a>
     </div><!-- /content -->
 
     <div data-role="footer">
