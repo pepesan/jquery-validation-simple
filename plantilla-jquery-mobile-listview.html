@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Código de plantilla de Jquery Mobile</title>
+  <meta name="description" content="Jquery mobile ejemplo de plantilla">
+  <meta name="author" content="David Vaquero">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fichero genérico de CSS -->
+  <link href="css/jquery.mobile.custom.structure.css" rel="stylesheet"/>
+  <!-- Fichero común de iconos -->
+  <link href="css/jquery.mobile.icons.min.css" rel="stylesheet"/>
+  <!-- fichero específico del tema (Themeroller) -->
+  <!--link href="css/minombre.css" rel="stylesheet"/-->
+  <!-- Fichero genérico de tema -->
+  <link href="css/jquery.mobile.custom.theme.css" rel="stylesheet"/>
+  <!-- Dependencia de Jquery -->
+  <script src="js/jquery-1.12.0.min.js"></script>
+  <!-- Fichero de JQuery Mobile -->
+  <script src="js/jquery.mobile.custom.js"></script>
+</head>
+  <body>
+  <!-- Una página -->
+  <div data-role="page">
+    <!-- Una cabecera -->
+    <div data-role="header">
+      <h1>Título de Cabecera</h1>
+    </div>
+    <!-- Un contenido principal -->
+    <div data-role="main" role="main" class="ui-content">
+      <ul data-role="listview">
+            <li>Acura</li>
+            <li>Audi</li>
+            <li>BMW</li>
+            <li>Cadillac</li>
+            <li>Ferrari</li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+            <li><a href="#">Acura</a></li>
+            <li><a href="#">Audi</a></li>
+            <li><a href="#">BMW</a></li>
+            <li><a href="#">Cadillac</a></li>
+            <li><a href="#">Ferrari</a></li>
+      </ul>
+      <ul data-role="listview" data-filter="true" data-filter-placeholder="Search fruits..." data-inset="true">
+            <li><a href="#">Apple</a></li>
+            <li><a href="#">Banana</a></li>
+            <li><a href="#">Cherry</a></li>
+            <li><a href="#">Cranberry</a></li>
+            <li><a href="#">Grape</a></li>
+            <li><a href="#">Orange</a></li>
+      </ul>
+      <ul data-role="listview" data-inset="true" data-divider-theme="a">
+            <li data-role="list-divider">Mail</li>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">Outbox</a></li>
+            <li data-role="list-divider">Contacts</li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Work</a></li>
+      </ul>
+      <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+            <li><a href="#">Adam Kinkaid</a></li>
+            <li><a href="#">Alex Wickerham</a></li>
+            <li><a href="#">Avery Johnson</a></li>
+            <li><a href="#">Bob Cabot</a></li>
+            <li><a href="#">Caleb Booth</a></li>
+            <li><a href="#">Christopher Adams</a></li>
+            <li><a href="#">Culver James</a></li>
+      </ul>
+      <ul data-role="listview" data-count-theme="b" data-inset="true">
+            <li><a href="#">Inbox <span class="ui-li-count">12</span></a></li>
+            <li><a href="#">Outbox <span class="ui-li-count">0</span></a></li>
+            <li><a href="#">Drafts <span class="ui-li-count">4</span></a></li>
+            <li><a href="#">Sent <span class="ui-li-count">328</span></a></li>
+            <li><a href="#">Trash <span class="ui-li-count">62</span></a></li>
+      </ul>
+      <ul data-role="listview" data-inset="true">
+            <li data-icon="custom" id="skull"><a href="#">custom-icon</a></li>
+            <li data-icon="delete"><a href="#">data-icon="delete"</a></li>
+            <li data-icon="gear"><a href="#">data-icon="gear"</a></li>
+            <li data-icon="info"><a href="#">data-icon="info"</a></li>
+            <li data-icon="false"><a href="#">data-icon="false"</a></li>
+      </ul>
+    </div>
+    <!-- Un pie de página -->
+    <div data-role="footer">
+      <h1>Título de Pie</h1>
+    </div>
+  </div>
+
+  </body>
+</html>

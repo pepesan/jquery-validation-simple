@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Código de plantilla de Jquery Mobile</title>
+  <meta name="description" content="Jquery mobile ejemplo de plantilla">
+  <meta name="author" content="David Vaquero">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fichero genérico de CSS -->
+  <link href="css/jquery.mobile.custom.structure.css" rel="stylesheet"/>
+  <!-- Fichero común de iconos -->
+  <link href="css/jquery.mobile.icons.min.css" rel="stylesheet"/>
+  <!-- fichero específico del tema (Themeroller) -->
+  <!--link href="css/minombre.css" rel="stylesheet"/-->
+  <!-- Fichero genérico de tema -->
+  <link href="css/jquery.mobile.custom.theme.css" rel="stylesheet"/>
+  <!-- Fichero genérico de DatePicker -->
+  <link href="css/jquery.mobile.datepicker.css" rel="stylesheet"/>
+  <!-- Fichero Específico de DatePicker -->
+  <link href="css/jquery.mobile.datepicker.theme.css" rel="stylesheet"/>
+  <!-- Dependencia de Jquery -->
+  <script src="js/jquery-1.12.0.min.js"></script>
+  <!-- Fichero de JQuery Mobile -->
+  <script src="js/jquery.mobile.custom.js"></script>
+  <!-- Fichero de JQuery Mobile DatePicker Wrapper -->
+  <script src="js/external/jquery-ui/datepicker.js"></script>
+  <!-- Fichero de JQuery Mobile DatePicker Wrapper -->
+  <script src="js/jquery.mobile.datepicker.js"></script>
+</head>
+  <body>
+  <!-- Una página -->
+  <div data-role="page">
+    <!-- Una cabecera -->
+    <div data-role="header">
+      <h1>Título de Cabecera</h1>
+    </div>
+    <!-- Un contenido principal -->
+    <div data-role="main" role="main" class="ui-content">
+
+      <input type="text" data-role="date">
+      <input type="text" data-role="date" data-inline="true">
+      <label for="slider">Slider:</label>
+      <input type="range" name="slider" id="slider" value="50" min="0" max="100">
+      <form>
+            <div data-role="rangeslider">
+                <label for="range-1a">Rangeslider:</label>
+                <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40">
+                <label for="range-1b">Rangeslider:</label>
+                <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80">
+            </div>
+      </form>
+      <label for="slider2">Flip switch:</label>
+      <select name="slider2" id="slider2" data-role="slider">
+            <option value="off">Off</option>
+            <option value="on">On</option>
+      </select>
+      <fieldset data-role="controlgroup">
+            <legend>Checkboxes, vertical controlgroup:</legend>
+            <input type="checkbox" name="checkbox-1a" id="checkbox-1a" checked="">
+            <label for="checkbox-1a">Cheetos</label>
+            <input type="checkbox" name="checkbox-2a" id="checkbox-2a">
+            <label for="checkbox-2a">Doritos</label>
+            <input type="checkbox" name="checkbox-3a" id="checkbox-3a">
+            <label for="checkbox-3a">Fritos</label>
+            <input type="checkbox" name="checkbox-4a" id="checkbox-4a">
+            <label for="checkbox-4a">Sun Chips</label>
+      </fieldset>
+      <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Checkboxes, mini, horizontal controlgroup:</legend>
+            <input type="checkbox" name="checkbox-6" id="checkbox-6">
+            <label for="checkbox-6">b</label>
+            <input type="checkbox" name="checkbox-7" id="checkbox-7" checked="">
+            <label for="checkbox-7"><em>i</em></label>
+            <input type="checkbox" name="checkbox-8" id="checkbox-8">
+            <label for="checkbox-8">u</label>
+      </fieldset>
+      <fieldset data-role="controlgroup">
+            <legend>Radio buttons, vertical controlgroup:</legend>
+                <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked">
+                <label for="radio-choice-1">Cat</label>
+                <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2">
+                <label for="radio-choice-2">Dog</label>
+                <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3">
+                <label for="radio-choice-3">Hamster</label>
+                <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4">
+                <label for="radio-choice-4">Lizard</label>
+      </fieldset>
+      <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Radio buttons, mini, horizontal controlgroup:</legend>
+                <input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
+                <label for="radio-choice-c">List</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-d" value="grid">
+                <label for="radio-choice-d">Grid</label>
+                <input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+                <label for="radio-choice-e">Gallery</label>
+      </fieldset>
+      <label for="select-choice-1" class="select">Select, native menu</label>
+      <select name="select-choice-1" id="select-choice-1">
+            <option value="standard">Standard: 7 day</option>
+            <option value="rush">Rush: 3 days</option>
+            <option value="express">Express: next day</option>
+            <option value="overnight">Overnight</option>
+      </select>
+      <label for="select-choice-a" class="select">Custom select menu:</label>
+      <select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+            <option>Custom menu example</option>
+            <option value="standard">Standard: 7 day</option>
+            <option value="rush">Rush: 3 days</option>
+            <option value="express">Express: next day</option>
+            <option value="overnight">Overnight</option>
+      </select>
+      <label for="select-choice-8" class="select">Multi-select with optgroups, custom icon and position:</label>
+      <select name="select-choice-8" id="select-choice-8" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+            <option>Choose a few options:</option>
+            <optgroup label="USPS">
+                <option value="standard" selected="">Standard: 7 day</option>
+                <option value="rush">Rush: 3 days</option>
+                <option value="express">Express: next day</option>
+                <option value="overnight">Overnight</option>
+            </optgroup>
+            <optgroup label="FedEx">
+                <option value="firstOvernight">First Overnight</option>
+                <option value="expressSaver">Express Saver</option>
+                <option value="ground">Ground</option>
+            </optgroup>
+      </select>
+      <label for="search">Search Input:</label>
+      <input type="search" name="password" id="search" value="" placeholder="Placeholder text...">
+    </div>
+    <!-- Un pie de página -->
+    <div data-role="footer">
+      <h1>Título de Pie</h1>
+    </div>
+  </div>
+
+  </body>
+</html>
