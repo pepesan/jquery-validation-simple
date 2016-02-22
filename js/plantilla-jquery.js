@@ -24,6 +24,7 @@ function init() {
     });
     //Ejemplo 3 Dependencias
     $("#formulario3").validate({
+
         rules: {
             email3: {
                 required: {
@@ -183,10 +184,17 @@ function init() {
         }
     });
 
-    $.validator.addMethod("miValidador", function (value, element, options)
+    $.validator.addMethod(
+        "min5",
+        function (value, element, options)
         {
             //se debe devolver true si valida, false si no
-            return false;
+            if(value.length>5){
+                return true;
+            }else{
+                return false;
+            }
+
         },
         "Esto no valida"
     );
@@ -194,21 +202,39 @@ function init() {
          rules:{
              name:{
                  required:true,
-                 miValidador:true
+                 min5:true
              }
          },
 
     });
     //validador personalizado de una url que empiece por un determinado dominio
-    $.validator.addMethod("domain", function(value, element) {
-        return this.optional(element) || /^http:\/\/mycorporatedomain.com/.test(value);
-    }, "Please specify the correct domain for your documents");
+    $.validator.addMethod(
+        "domain",
+        function(value, element) {
+            return this.optional(element) || /^http:\/\/mycorporatedomain.com/.test(value);
+        },
+        "Please specify the correct domain for your documents");
     //saber si un número está entre dos valores que se pongan como valor
-    $.validator.addMethod("math", function(value, element, params) {
+    $.validator.addMethod(
+        "math",
+        function(value, element, params) {
         return this.optional(element) || value == params[0] + params[1];
-    }, jQuery.validator.format("Please enter the correct value for {0} + {1}"));
+        },
+        jQuery.validator.format("Resultado incorrecto a {0} + {1}"));
+
+    $("#formulario18").validate({
+        rules:{
+            resultado:{
+                required:true,
+                number:true,
+                math:[7,5]
+            }
+        },
+
+    });
 }
 $(document).ready(init);
+//document.addEventListener("DOMContentLoaded",init);
 /*
  required – Makes the element required.
  remote – Requests a resource to check the element for validity.
