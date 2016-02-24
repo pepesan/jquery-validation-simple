@@ -24,16 +24,18 @@
   <div data-role="page" id="primera">
 
     <div data-role="header">
+
       <h1>Primera</h1>
+      <a href="#segunda" class="ui-btn ui-btn-corner-all ui-shadow ui-btn-right ui-icon-user ui-btn-icon-notext">ir a segunda</a>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
       <p>I'm first in the source order so I'm shown as the page.</p>
       <p>View internal page called <a href="#segunda">ir a segunda</a></p>
-      <p>Saltar a un
-        <a href="#dialogo" data-dialog="true"
-           class="ui-shadow ui-btn ui-corner-all ui-btn-inline"
-           data-transition="slidedown" data-rel="dialog">Diálogo</a>
+      <p>Saltar a un <a href="#dialogo" data-dialog="true"
+                        class="ui-shadow ui-btn ui-corner-all ui-btn-inline"
+                        data-transition="slidedown" data-rel="dialog">Diálogo</a>
+
       </p>
     </div><!-- /content -->
 
@@ -57,6 +59,7 @@
   <div data-role="page" id="segunda">
 
     <div data-role="header">
+      <a href="#primera" data-role="back" class=" ui-btn ui-btn-corner-all ui-shadow ui-icon-back ui-btn-icon-notext">ir a segunda</a>
       <h1>Segunda</h1>
     </div><!-- /header -->
 
