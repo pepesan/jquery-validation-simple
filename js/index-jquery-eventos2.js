@@ -11,14 +11,30 @@
  });
  */
 var app={
+    /*
     activate: function () {
         //console.log("Evento OnBlur");
         $("#campo").toggleClass("active");
     },
+    activate2: function () {
+        //console.log("Evento OnBlur");
+        $("#campo2").toggleClass("active");
+    },
+    */
+    activateGeneric: function(evento){
+        $(evento.currentTarget).toggleClass("active");
+        console.log(evento.currentTarget);
+    },
     init:function (){
         console.log("Página cargada");
-        $("#campo").focus(app.activate);
-        $("#campo").blur(app.activate);
+        /*
+        $("#campo").focus(app.activateGeneric);
+        $("#campo").blur(app.activateGeneric);
+        $("#campo2").focus(app.activateGeneric);
+        $("#campo2").blur(app.activateGeneric);
+        */
+        $("input").focus(app.activateGeneric);
+        $("input").blur(app.activateGeneric);
     },
     loaded:function (){
     console.log("Página completamente cargada");
