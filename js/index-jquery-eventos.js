@@ -13,15 +13,21 @@
 var app={
     ponFondoNegro:function(){
         //console.log("Han pulsado el sgundo botón");
-        $("#fondo").css("background-color","black");
+        //$("#fondo").css("background-color","black");
+        $("#fondo").attr("class","");
+        $("#fondo").addClass("negro");
     },
     ponFondoRojo:function(){
         //console.log("Han pulsado el sgundo botón");
-        $("#fondo").css("background-color","red");
+        //$("#fondo").css("background-color","red");
+        $("#fondo").attr("class","");
+        $("#fondo").addClass("rojo");
     },
     ponFondoAzul:function (){
         //console.log("Me han pulsado");
-        $("#fondo").css("background-color","blue");
+        //$("#fondo").css("background-color","blue");
+        $("#fondo").attr("class","");
+        $("#fondo").addClass("azul");
     },
     init:function (){
         console.log("Página cargada");

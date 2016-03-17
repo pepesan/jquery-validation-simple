@@ -1,5 +1,13 @@
 #fondo{
-    background-color: black;
     height: 300px;
     width: 300px;
+}
+.rojo{
+    background-color: red;
+}
+.azul{
+    background-color: blue;
+}
+.negro{
+    background-color: black;
 }
