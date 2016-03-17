@@ -11,16 +11,23 @@
  });
  */
 var app={
-    segundoClick:function(){
-        console.log("Han pulsado el sgundo botón");
+    ponFondoNegro:function(){
+        //console.log("Han pulsado el sgundo botón");
+        $("#fondo").css("background-color","black");
     },
-    clickado:function (){
-        console.log("Me han pulsado");
+    ponFondoRojo:function(){
+        //console.log("Han pulsado el sgundo botón");
+        $("#fondo").css("background-color","red");
+    },
+    ponFondoAzul:function (){
+        //console.log("Me han pulsado");
+        $("#fondo").css("background-color","blue");
     },
     init:function (){
         console.log("Página cargada");
-        $("#boton").click(app.clickado);
-        $("#boton2").click(app.segundoClick);
+        $("#rojo").click(app.ponFondoRojo);
+        $("#azul").click(app.ponFondoAzul);
+        $("#negro").click(app.ponFondoNegro);
     },
     loaded:function (){
         console.log("Página completamente cargada");
