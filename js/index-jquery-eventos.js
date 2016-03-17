@@ -11,12 +11,16 @@
  });
  */
 var app={
+    segundoClick:function(){
+        console.log("Han pulsado el sgundo botón");
+    },
     clickado:function (){
         console.log("Me han pulsado");
     },
     init:function (){
         console.log("Página cargada");
         $("#boton").click(app.clickado);
+        $("#boton2").click(app.segundoClick);
     },
     loaded:function (){
         console.log("Página completamente cargada");
