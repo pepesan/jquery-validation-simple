@@ -11,16 +11,28 @@ function pulsado(evento){
 function enviado(evento) {
     console.log("Formulario secuestrado");
     console.log($("#campo").val());
-    if($("#campo").val()!=""){
-        console.log("El campo está rellenado!");
+    if($("#campo").val()!="" && $("#campo2").val()!=""){
+        console.log("Los campos está rellenado!");
     }else{
         evento.preventDefault();
-        console.log("El campo está vacío!");
+        console.log("Al menos uno de los campos está vacío!");
     }
+}
+function dentro(){
+    console.log("dentro");
+}
+function encima(){
+    console.log("encima");
+}
+function fuera(){
+    console.log("fuera");
 }
 function init(){
     console.log("Página cargada");
     $("#enlace").click(pulsado);
+    $("#enlace").mouseover(dentro);
+    $("#enlace").mousemove(encima);
+    $("#enlace").mouseleave(fuera);
     $("#formulario").submit(enviado);
 }
 //cuando se carga la página ejecuta la función init()
