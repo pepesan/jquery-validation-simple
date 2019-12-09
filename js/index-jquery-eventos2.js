@@ -37,8 +37,8 @@ var app={
         $("input").blur(app.activateGeneric);
     },
     loaded:function (){
-    console.log("Página completamente cargada");
-}
+        console.log("Página completamente cargada");
+    }
 };
 
 //cuando se carga la página ejecuta la función init()

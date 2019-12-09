@@ -11,10 +11,22 @@
 		<title>Mi titulo</title>
 
 		<script src="js/jquery-3.4.1.js"></script>
-		<script src="js/index-jquery.js"></script>
+		<script src="js/ejercicios-eventos.js"></script>
 	</head>
 	<body>
-		<h1 class="verde"> Una cosa verde</h1>
-		<h2 id="titulo" class="verde">Primer ejemplo de JQuery</h2>
+		<h2>Formulario de Login</h2>
+		<form id="login_form" method="post" >
+			<div>
+				<label for="login_username">Nombre de usuario</label>
+				<input type="text" name="username" id="login_username" value=""/>
+			</div>
+			<div>
+				<label for="login_password">Constraseña</label>
+				<input type="password" name="username" id="login_password" value=""/>
+			</div>
+			<div>
+				<input type="submit" id="login_submit" value="Enviar"/>
+			</div>
+		</form>
 	</body>
 </html>

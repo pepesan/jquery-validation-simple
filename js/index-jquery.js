@@ -16,8 +16,8 @@ function init(){
 }
 //cuando se carga la página ejecuta la función init()
 $(document).ready(init);
-// esto permite definir un evento cuando la página está cargada completamente
-function loaded(){
-    console.log("Página completamente cargada");
-}
-$(window).load(loaded);
+// document.addEventListener('DOMContentLoaded', init);
+/*
+versión minimizada
+function init(){console.log("Página cargada")}$(document).ready(init);
+ */
